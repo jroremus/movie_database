@@ -1,0 +1,28 @@
+h1 {
+    color: blue;
+}
+
+#posterDiv {
+    padding-left: 30px;
+}
+
+.jumbotron {
+    height: 315px;
+    text-align:center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.imageContainer {
+    float:left;
+}
+
+.positioned {
+    margin-right: 40px;
+    margin-left: 40x;
+}
+
+.positioned1 {
+    margin-left: 22px;
+    margin-right: 40px;
+}

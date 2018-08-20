@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block app_content %}
+    <div id="main">
+           <div class="container">
+               <div class="col-md-8 col-md-offset-3">
+                   <!-- /input-group -->
+                   <div id="displayBody">
+                       <div class="pull-left">
+                           <ul class="list-unstyled" id="displayList">
+                               <li id="title"></li>
+                               <li id="year"></li>
+                               <li id="rated"></li>
+                               <li id="runtime"></li>
+                               <li id="director"></li>
+                           </ul>
+                       </div>
+                       <div></div>
+                       <div id="posterDiv" class="pull-left">
+                           <span id="poster"></span>
+                           <div class="addToCart"></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+<div class="jumbotron">
+    <div id="posterDiv" class="pull-left">
+        <div class="imageContainer">
+            <a href="#" id="blackPanther" class="black_panther"></a>
+        </div>
+        <div class="imageContainer">
+            <a href="#" id="avengers" class="avengers"></a>        
+        </div>
+        <div class="imageContainer">
+            <a href="#" id="incredibles_2" class="incredibles_2"></a>
+        </div>
+        <div class="imageContainer">
+                <a href="#" id="jurassic_world" class="jurassic_world"></a>   
+        </div>
+        <div class="imageContainer">
+            <a href="#" id="deadpool" class="deadpool"></a>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

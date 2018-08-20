@@ -1,0 +1,44 @@
+{% extends 'layout.html' %} 
+
+{% block app_content %}
+<form action="" method="POST" role="form" novalidate>
+    {{ form.hidden_tag() }}
+    <legend>Registration Form</legend>
+
+    <div class="form-group">
+        <!-- we can get rid of the placeholder text and replace it with what we created in forms.py-->
+        {{ form.email.label }}
+        <!--form-control adds bootstrap styling in that we lost by linking this to the forms.py-->
+        {{ form.email(size=100, class='form-control') }}
+        {% for error in form.email.errors %}
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>[{{ error }}]</strong>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        {{ form.password.label }}
+        {{ form.password(class='form-control') }}
+        {% for error in form.password.errors %}
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>[{{ error }}]</strong>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="form-group">
+        {{ form.password2.label }}
+        {{ form.password2(class='form-control') }}
+        {% for error in form.password2.errors %}
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>[{{ error }}]</strong>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- form.submit is a function-->
+    {{ form.submit(class='btn btn-default') }}
+</form>
+
+{% endblock %}
